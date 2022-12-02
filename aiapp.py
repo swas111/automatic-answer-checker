@@ -257,10 +257,7 @@ def semantic_similarity(actual_answer , given_answer) :
                 
         
         if(semantic_1 == 0 and semantic_2 == 0) :
-            
-            """
-            Well and good
-            """
+            pass
         elif(semantic_1 < 0  and semantic_2 >= 0) :
             not_matching_semantics.append(list([actual[index],given[z]]))
             embed_z*=(-1)
@@ -342,7 +339,7 @@ li =[]
 segments1 = segmentation(im1)
 segments2 = segmentation(im2)
 for i in range(0, len(segments1)):
-    x = st.number_input('marks for question ', key = i)
+    x = st.number_input('marks for question ', value = 1.00 , key = i)
     marks.append(x)
 for i in range(0, len(segments1)):
     segment1 = segments1[i]
